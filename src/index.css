@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+:root {
+  --amarelo-padrao: #fee600;
+  --cinza-padrao: #4b4a4a;
+  --radius-padrao: 10px;
+}
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #4b4a4a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(180, 180, 180);
+  border-radius: 7px;
+  border: 3px solid #4b4a4a;
+}
+
+code {
+  font-family: "Roboto", sans-serif;
+}
+
+.std-button {
+  font-size: 1rem;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+.std-button:hover {
+  background: #fff;
+  color: var(--cinza-padrao);
+}
+
+.std-input {
+  width: 100%;
+  line-height: 30px;
+  padding: 5px;
+  color: var(--cinza-padrao);
+  margin-bottom: 20px;
+  border-radius: calc(var(--radius-padrao) - 5px);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* LOGIN */
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-wrapper {
+  background: var(--amarelo-padrao);
+  width: 80%;
+  height: auto;
+}
+.login-image {
+  background: url("./img/login/login-background.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.login-btn {
+  width: 100%;
+}
+.login-form {
+  width: 50%;
+  background: var(--cinza-padrao);
+  border-radius: var(--radius-padrao);
+  text-align: center;
+  padding: 20px;
+}
+.login-form span {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .login-wrapper {
+    padding: 0 5%;
+  }
+  .login-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .login-image {
+    display: none;
+  }
+  .login-wrapper {
+    width: 100%;
+  }
+}
+
+/* CADASTROCANDIDATO */
+.cadastrocandidato-container {
+  background: var(--amarelo-padrao);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.cadastrocandidato-form-wrapper {
+  text-align: center;
+  background: var(--cinza-padrao);
+  width: 50%;
+  border-radius: var(--radius-padrao);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  align-self: start;
+}
+.cadastrocandidato-input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.cadastrocandidato-input-wrapper .std-input:nth-child(even) {
+  margin: 0 0 20px 20px;
+}
+.cadastrocandidato-input-wrapper .std-input:nth-child(odd) {
+  margin: 0 20px 20px 0;
+}
+.cadastrocandidato-input-wrapper input {
+  width: calc(50% - 20px);
+}
+.cadastrocandidato-input-wrapper select {
+  width: calc(50% - 20px);
+}
+
+.checkbox-wrapper-title {
+  text-align: left;
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.checkbox-wrapper {
+  width: 100%;
+  border-radius: calc(var(--radius-padrao) - 5px);
+  border: 1px solid #fff;
+  padding: 5px 5%;
+}
+.checkbox-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.label {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: calc(var(--radius-padrao) - 5px);
+  transition: color 150ms ease-in-out, background 150ms ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + label {
+  background: white;
+  color: var(--cinza-padrao);
+}
+
+.submit-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-input-label {
+  background: #fff;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  height: 35px;
+  padding: 2px;
+}
+.file-input-label span {
+  display: inline-block;
+}
+
+.submit-buttons {
+  height: 35px;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
